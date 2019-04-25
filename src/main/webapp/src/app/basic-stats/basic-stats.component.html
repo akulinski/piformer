@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+
+    <h1><span class="badge badge-primary">Basic System Data</span></h1>
+
+    <ul class="list-group">
+
+      <li *ngFor="let device of devices"
+          class="list-group-item d-flex justify-content-between align-items-center active">
+        {{ device }}
+        <span class="badge badge-secondary badge-pill">pill1</span>
+      </li>
+    </ul>
+
+
+  </div>
+</div>
