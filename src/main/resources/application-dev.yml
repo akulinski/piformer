@@ -47,7 +47,7 @@ spring:
             hibernate.id.new_generator_mappings: true
             hibernate.connection.provider_disables_autocommit: true
         hibernate:
-            ddl-auto: update
+            ddl-auto: create-drop
     messages:
         cache-duration: PT1S # 1 second, see the ISO 8601 standard
 

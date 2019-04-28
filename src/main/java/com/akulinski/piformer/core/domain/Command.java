@@ -8,7 +8,6 @@ import java.util.Set;
 
 @Entity
 @Table(name = "command")
-@Data
 public class Command implements Serializable {
 
     @Id
@@ -17,8 +16,46 @@ public class Command implements Serializable {
     private Long id;
 
     @Column
+    private String description;
+
+    @Column
     private String value;
 
     @OneToMany(mappedBy = "command", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<CommandHistory> commandHistorySet;
+
+    public Command() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    public Set<CommandHistory> getCommandHistorySet() {
+        return commandHistorySet;
+    }
+
+    public void setCommandHistorySet(Set<CommandHistory> commandHistorySet) {
+        this.commandHistorySet = commandHistorySet;
+    }
 }

@@ -1,2 +1,2 @@
-INSERT INTO command(ID,value) VALUES (SEQUENCE_GENERATOR.NEXTVAL,'sensors');
+INSERT INTO command(ID,description,value) VALUES (SEQUENCE_GENERATOR.NEXTVAL,'displays all information from sensors','sensors');
 COMMIT;
